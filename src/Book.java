@@ -1,37 +1,38 @@
 public class Book {
 
-    private String author;
+    private Author author;
     private String name;
     private int publishYear;
 
+
     public Book(Author author, String name, int publishYear) {
-        this.author = String.valueOf(author);
+        this.author = author;
         this.name = name;
         this.publishYear = publishYear;
 
     }
 
-    public String getAuthor(){
-        return this.author;
+    public Author getAuthor() {
+        return author;
     }
 
-    public String getName(){
+    public String getName() {
         return this.name;
     }
 
-    public int getPublishYear(){
+    public int getPublishYear() {
         return this.publishYear;
     }
 
-    public void setAuthor(String author){
+    public void setAuthor(Author author) {
         this.author = author;
     }
 
-    public void setName(String name){
+    public void setName(String name) {
         this.name = name;
     }
 
-    public void setPublishYear(int publishYear){
+    public void setPublishYear(int publishYear) {
         this.publishYear = publishYear;
     }
 

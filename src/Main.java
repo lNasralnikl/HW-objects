@@ -11,7 +11,18 @@ public static void main(String[] args) {
 
     //book1.setPublishYear(2000);
 
-    System.out.println(book1.getAuthor() + " " + book1.getName() + " " + book1.getPublishYear());
+    //Книга
+    System.out.println(book1.toString());
+    System.out.println(book1.equals(book2));
+    System.out.println(book1.hashCode());
+
+    //Автор
+    System.out.println();
+    System.out.println(author1.toString());
+    System.out.println(author1.equals(book2));
+    System.out.println(author1.hashCode());
+    System.out.println(author2.hashCode());
+
 
 }
 

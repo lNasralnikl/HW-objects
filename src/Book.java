@@ -15,25 +15,25 @@ public class Book {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return getPublishYear() == book.getPublishYear() && Objects.equals(getAuthor(), book.getAuthor()) && Objects.equals(getName(), book.getName());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getAuthor(), getName(), getPublishYear());
+    }
+
+    @Override
     public String toString() {
         return "Book{" +
                 "author=" + author +
                 ", name='" + name + '\'' +
                 ", publishYear=" + publishYear +
                 '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Book book = (Book) o;
-        return Objects.equals(name, book.name);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hashCode(name);
     }
 
     public Author getAuthor() {

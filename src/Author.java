@@ -19,12 +19,12 @@ public class Author {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Author author = (Author) o;
-        return Objects.equals(name, author.name);
+        return Objects.equals(getSurname(), author.getSurname()) && Objects.equals(getName(), author.getName());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(name);
+        return Objects.hash(getSurname(), getName());
     }
 
     public String getSurname() {
